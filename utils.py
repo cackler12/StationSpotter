@@ -1,0 +1,1 @@
+timezone_map = {'US_EAST': -18000, 'US_CENTRAL': -21600, 'US_PACIFIC': -28800, 'US_ALASKA': -32400, 'US_HAWAII': -36000}
