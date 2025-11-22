@@ -13,16 +13,18 @@ def main():
     logger = logging.getLogger("main")
 
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read('server/config/config.ini')
     if (config.sections() != ['LOCATION', 'API_KEY']):
         logger.error("Config file has been corrupted, generating a new config :)")
-        if os.path.exists('config.ini'):
-            os.rename('config.ini', 'config.OLD')
+        if os.path.exists('server/config/config.ini'):
+            if os.path.exists('server/config/config.OLD'):
+                os.remove('server/config/config.OLD')
+            os.rename('server/config/config.ini', 'server/config/config.OLD')
         config = None
         config = configparser.ConfigParser()
-        config['LOCATION'] = {'lattitude': 0.0, 'longitude': 0.0, 'altitude': 0.0}
+        config['LOCATION'] = {'lattitude': 0.0, 'longitude': 0.0, 'altitude': 0.0, 'timezone': "US_CENTRAL"}
         config['API_KEY'] = {'key': "INSERT_N2Y0_API_KEY"}
-        with open('config.ini', 'w') as configfile:
+        with open('server/config/config.ini', 'w') as configfile:
             config.write(configfile)
 
     observer_lattitude = config['LOCATION'].get('lattitude')
