@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StationSpotter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./images/favicon.ico" />
+</div>
+  </head>
+  <body>
+    <div class="page-header-bar">
+      <p class="page-header-text">StationSpotter</p>
+    </div>
+    <div class="page-main">
+      <a class="gps-link" target="_blank" rel="noopener noreferrer" href="https://www.gps-coordinates.net/">Find your Lat and Long here!</a>
+      <form id="location-form">
+        <label for="lat">Lattitude:</label>
+        <input type="text" id="lat" name="lat" placeholder="0.0"><br><br>
+        <label for="long">Longitude:</label>
+        <input type="text" id="long" name="long" placeholder="0.0"><br><br>
+        <label for="timezone">Timezone (US):</label>
+        <select name="timezone" id="timezone">
+          <option value="US_EAST">EST</option>
+          <option value="US_CENTRAL">CST</option>
+          <option value="US_PACIFIC">MST</option>
+          <option value="US_ALASKA">AKST</option>
+          <option value="US_HAWAII">HST</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script src="./client.js"></script>
+</html>

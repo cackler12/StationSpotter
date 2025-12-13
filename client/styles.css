@@ -1,0 +1,30 @@
+body {
+    background-image: url('./images/iss-background.png');
+    margin: 0;
+    padding: 0;
+}
+
+.page-header-bar {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: black;
+    padding: 1px;
+    margin: 0px;
+}
+
+.page-header-text {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    font-family: "Lucida Console", "Courier New";
+}
+
+.page-main {
+    margin-top: 100px;
+    text-align: center;
+}
+
+form {
+    margin-top: 50px;
+}
